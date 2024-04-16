@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: auth_route
+            uri: http://localhost:9090
+            predicates:
+              - Path=/auth/**
+              - Path-/member/**
